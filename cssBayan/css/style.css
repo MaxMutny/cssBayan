@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(228, 255, 220);
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+}
+h1 {
+  font-size: 1em;
+}
+p {
+  font-size: 0.8em;
+  font-weight: bolder;
+  
+}
+.meme {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  display: none;
+}
+.top_item {
+  border-top: 0.15em solid rgb(48, 93, 175);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+.box {
+  color: rgb(16, 64, 167);
+  cursor: pointer;
+}
+.icon {
+  display: none;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+
+
+.box:hover .meme {
+  display: block;
+}
+
+.box:hover .icon {
+  transform: rotate(45deg);
+}
+
+.container:hover .box {
+  color: black;
+  transition: 1s;
+}
+.container:hover .icon {
+  display: block;
+}
+
+
+.input {
+  display: none;
+}
+
+.input:checked ~ * .meme {
+  display: block;
+}
+
+
+.input:checked ~ * p {
+  color: black;
+}
+
+@media (min-width: 320px) {
+  .icon {
+    width: 1em;
+    height: 1em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+}
+
+
+
+@media (min-width: 820px) {
+  .icon {
+    width: 2em;
+    height: 2em;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  p {
+    font-size: 2.5em;
+  } 
+}
+
+@media (min-width: 1920px) {
+  .container {
+    width: 50vw;
+  }
+}
