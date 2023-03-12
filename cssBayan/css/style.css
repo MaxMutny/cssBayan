@@ -15,6 +15,8 @@ h1 {
 p {
   font-size: 0.8em;
   font-weight: bolder;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 .meme {
@@ -50,7 +52,7 @@ p {
 }
 
 .box:hover .meme {
-  width: 50%;
+  width: 40%;
   margin-bottom: 1.5em;
 }
 
@@ -69,7 +71,7 @@ p {
 }
 
 .input:checked ~ * .meme {
-  width: 50%;
+  width: 40%;
   margin-bottom: 1.5em;
 }
 
@@ -110,27 +112,27 @@ p {
 
 @media (min-width: 321px) {
   .icon {
-    width: 1.2em;
-    height: 1.2em;
+    width: 1em;
+    height: 1em;
   }
   h1 {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
   p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
 @media (min-width: 821px) {
   .icon {
-    width: 2em;
-    height: 2em;
+    width: 1.6em;
+    height: 1.5em;
   }
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   p {
-    font-size: 2em;
+    font-size: 1.5em;
   } 
 }
 
@@ -139,9 +141,9 @@ p {
     width: 50vw;
   }
   h1 {
-    font-size: 2.6em;
+    font-size: 2.2em;
   }
   p {
-    font-size: 2.2em;
+    font-size: 2em;
   } 
 }
