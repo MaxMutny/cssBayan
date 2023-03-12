@@ -1,82 +1,68 @@
 body {
   background-color: rgb(253, 255, 243);
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
 }
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 70vw;
-  /* padding-left: 10%;
-  padding-right: 10%; */
 }
+
 h1 {
   font-size: 1em;
 }
+
 p {
   font-size: 0.8em;
   font-weight: bolder;
-  
 }
+
 .meme {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* margin-bottom: 1.5em; */
-  /* display: none; */
   width: 0%;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.6, 1, 0.1, 1);
-
-
-
 }
 .top_item {
   border-top: 0.15em solid rgb(126, 202, 240);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  
 }
+
 .box {
   color: rgb(37, 91, 191);
   cursor: pointer;
 }
-svg {
+
+.icon {
   margin-left: 1em;
   display: none;
   width: 1em;
   height: 1em;
-  fill:black
+  fill:rgb(0, 0, 0);
+  transition-property: all;
+  transition-duration: 0.3s;
+  flex-shrink: 0;
 }
 
-
-
-
 .box:hover .meme {
-  /* display: block; */
   width: 50%;
   margin-bottom: 1.5em;
 }
 
-.box:hover svg {
+.box:hover .icon {
   transform: rotate(45deg);
   transition-property: all;
   transition-duration: 0.2s;
 }
 
-
-.container:hover .box {
-  color: black;
-  transition: 1s;
-}
-.container:hover svg {
+.container:hover .icon {
   display: block;
 }
-
 
 .input {
   display: none;
@@ -86,10 +72,10 @@ svg {
   width: 50%;
   margin-bottom: 1.5em;
 }
-.input:checked ~ * svg {
+
+.input:checked ~ * .icon {
   transform: rotate(45deg);
 }
-
 
 .input:checked ~ * p {
   color: black;
@@ -101,40 +87,61 @@ svg {
   filter: contrast(70%) brightness(130%);
   
 }
-.box:active svg {
+.box:active .icon {
   fill: rgb(37, 91, 191);
 }
 
-@media (min-width: 321px) {
-  svg {
-    width: 1.5em;
-    height: 1.5em;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  p {
-    font-size: 1.5em;
+@media (hover: hover) {
+  .container:hover .box {
+    color: black;
+    transition: 1s;
   }
 }
 
+@media (hover: none) {
+  .icon {
+    display: block;
+    fill: rgb(37, 91, 191);
+  }
+  .input:checked ~ * .icon {
+    fill: black;
+  }
+}
 
-
-@media (min-width: 820px) {
-  svg {
-    width: 2.5em;
-    height: 2.5em;
+@media (min-width: 321px) {
+  .icon {
+    width: 1.2em;
+    height: 1.2em;
   }
   h1 {
-    font-size: 4em;
+    font-size: 1.8em;
   }
   p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 821px) {
+  .icon {
+    width: 2em;
+    height: 2em;
+  }
+  h1 {
     font-size: 2.5em;
+  }
+  p {
+    font-size: 2em;
   } 
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1900px) {
   .container {
     width: 50vw;
   }
+  h1 {
+    font-size: 2.6em;
+  }
+  p {
+    font-size: 2.2em;
+  } 
 }
